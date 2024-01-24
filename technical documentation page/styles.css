@@ -10,7 +10,7 @@ html {
 
 body {
   background-color: rgb(246, 244, 242);
-  font-family: Arial, sans-serif;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 main {
@@ -47,7 +47,7 @@ ul {
 nav li {
   border-bottom: 1px dotted rgb(228, 216, 216);
   display: flex;
-  height: 40px;
+  height: 45px;
   align-items: center;
 }
 
