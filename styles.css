@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #202b33;
+}
+
+#welcome-section {
+  height: 100vh;
+  /* background-color: #202b33; */
+  color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  padding: 20px;
+}
+
+.project-tile {
+  border: 1px solid white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: #202b33; */
+  border-bottom: white 1px solid;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+#profile-link,
+a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+  }
+}
