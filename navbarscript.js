@@ -1,37 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section");
 
-  function setActiveLink() {
-    let index = sections.length;
+let currentSection = "";
+window.addEventListener("scroll", () => {
+  sections.forEach((section) => {
+    let top = window.scrollY;
+    let offset = section.offsetTop - 150;
+    let height = section.offsetHeight;
+    let id = section.getAttribute("id");
+    console.log("top", top);
+    console.log("offset", offset);
+    console.log("height", top);
+    console.log("id", id);
 
-    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-    navLinks.forEach((link) => link.classList.remove("active"));
-    if (index >= 0) {
-      navLinks[index].classList.add("active");
-    }
-  }
-
-  setActiveLink();
-  window.addEventListener("scroll", setActiveLink);
-
-  // Smooth scrolling for anchor links
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: "smooth",
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        // link.classList.add("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
       });
-
-      console.log("link", link);
-
-      navLinks.forEach((link) => link.classList.remove("active"));
-      link.classList.add("active");
-    });
+    }
   });
 });
