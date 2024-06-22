@@ -133,6 +133,8 @@ a {
   min-width: calc(33.333% - 20px);
   background: linear-gradient(45deg, #e9e2cb, rgb(232, 192, 118));
   text-align: center;
+  max-height: 400px;
+  overflow: hidden;
   padding: 20px;
   box-sizing: border-box;
 }
