@@ -72,7 +72,6 @@ main {
 
 .nav-link:hover {
   color: rgb(30, 112, 126);
-  /* border: wheat 1px solid; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -132,10 +131,22 @@ a {
   border: 1px solid black;
   flex: 1 1 calc(33.333% - 20px);
   min-width: calc(33.333% - 20px);
-  background-color: #ecf3f6;
+  background: linear-gradient(45deg, #e9e2cb, rgb(232, 192, 118));
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.project-tile > a {
+  color: black;
+  padding: 4px;
+  background-color: #f7e08a;
+  border-radius: 8px;
+}
+
+.project-tile > h2,
+.project-tile p {
+  padding-bottom: 8px;
 }
 
 @media (max-width: 900px) {
