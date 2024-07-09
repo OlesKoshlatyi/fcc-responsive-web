@@ -15,6 +15,7 @@ body {
 
 main {
   position: absolute;
+  padding: 8px;
   left: 320px;
 }
 
@@ -36,8 +37,8 @@ nav header {
   border-bottom: 1px solid rgb(228, 216, 216);
 }
 
-section {
-  border-bottom: 1px dashed rgb(42, 133, 133);
+nav header h2 {
+  color: black;
 }
 
 ul {
@@ -47,20 +48,27 @@ ul {
 nav li {
   border-bottom: 1px dotted rgb(228, 216, 216);
   display: flex;
-  height: 45px;
+  min-height: 45px;
   align-items: center;
 }
 
 li a {
+  padding: 8px 0 8px 0;
   font-size: 1.2rem;
-  margin-left: 8px;
+  margin: 8px;
   font-weight: bold;
   text-decoration: none;
   color: antiquewhite;
+  font-size: 14px;
 }
 
 a:hover {
   color: rgb(194, 191, 118);
+}
+
+.active {
+  color: rgb(194, 191, 118);
+  font-size: 1.2rem;
 }
 
 @media (max-width: 560px) {
@@ -73,6 +81,36 @@ a:hover {
   }
 
   nav li {
-    height: 20px;
+    min-height: 50px;
   }
+}
+
+section {
+  border-bottom: 1px dashed rgb(42, 133, 133);
+  min-height: 400px;
+}
+
+section header {
+  font-size: 20px;
+  margin-top: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgb(78, 105, 80);
+}
+
+p > i {
+  padding: 12px;
+  display: inline-block;
+  width: 75%;
+}
+
+i::before {
+  margin-right: 8px;
+  content: "";
+  display: inline-block;
+  background-color: rgb(78, 105, 80);
+  border: 1px solid rgb(142, 70, 70);
+  width: 5px;
+  height: 5px;
+  border-radius: 8px;
 }
